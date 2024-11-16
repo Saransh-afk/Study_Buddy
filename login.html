@@ -354,11 +354,13 @@ body {
             align-items: center;
         }
 
-    body .container-flex{
-            margin-top: 1vh;
+    body .container-flex
+    
+    {
+            margin-top: 3vh;
             margin-left: 1vw;
-            width: 17vw;
-            height: 7vw;
+            width: 20vw;
+            height: 8vw;
             align-items: flex-start;
     }
 
@@ -552,19 +554,20 @@ body .container .content {
             let pageContentBox = document.querySelector('body .content');
             let sliderBox = document.querySelector('body .slider');
             let rememberMeCheckbox = document.getElementById('remember-me-checkbox');
+            let forgotPass = document.getElementById('forgot-password-label');
             let emailInput = document.getElementById('email-input');
             let emailInputIcon = document.getElementsByClassName('fa-envelope')[0];
             let arrow = document.createElement('i');
             arrow.classList = 'fa-solid fa-arrow-right';
-            rememberMeCheckbox.style.display = 'none';
-            emailInput.style.display = 'none';
-            emailInputIcon.style.display = 'none';
+            rememberMeCheckbox.style.display = 'block';
+            emailInput.style.display = 'block';
+            emailInputIcon.style.display = 'block';
     
             function updateSliderPosition(isSignIn) {
                 if (window.innerWidth <= 400) { // Check if the viewport width is 400 pixels or less
                     if (isSignIn) {
                         // Move the slider up for sign-in
-                        sliderBox.style.top = '25px'; // Adjust to the desired position
+                        sliderBox.style.top = '55px'; // Adjust to the desired position
                         pageContentBox.style.opacity = 1; 
                         SignInOrUpTitle.textContent = 'Sign In';
                         SignInOrUpButton.textContent = 'Sign In';
@@ -578,11 +581,15 @@ body .container .content {
                 } else {
                     if (isSignIn) {
                         // Normal left/right slider position for sign-in
+                        SignInOrUpTitle.textContent = 'Sign In';
+                        SignInOrUpButton.textContent = 'Sign In';
                         sliderBox.style.borderRadius = '40px 80px 80px 40px';
                         sliderBox.style.left = 'calc(0% - 1px)';
                         pageContentBox.style.right = '0%';
                     } else {
                         // Normal left/right slider position for sign-up
+                        SignInOrUpTitle.textContent = 'Sign Up';
+                        SignInOrUpButton.textContent = 'Sign Up';
                         sliderBox.style.borderRadius = '80px 40px 40px 80px';
                         sliderBox.style.left = 'calc(50% - 30px)';
                         pageContentBox.style.right = 'calc(50% + 30px)';
@@ -599,9 +606,10 @@ body .container .content {
                         setTimeout(function () {
                             pageContentBox.style.opacity = i.toFixed(2);
                             if (i <= 0.01) {
-                                emailInput.style.display = 'none';
-                                emailInputIcon.style.display = 'none';
-                                rememberMeCheckbox.style.display = 'none';
+                                emailInput.style.display = 'block';
+                                emailInputIcon.style.display = 'block';
+                                rememberMeCheckbox.style.display = 'block';
+                                forgotPass.style.display='block';
                                 SignInOrUpButton.appendChild(arrow);
                             }
                         }, (1 - i) * 100);
@@ -625,8 +633,9 @@ body .container .content {
                             if (i <= 0.01) {
                                 emailInput.style.display = 'block';
                                 emailInputIcon.style.display = 'block';
-                                rememberMeCheckbox.style.display = '';
+                                rememberMeCheckbox.style.display = 'block';
                                 rememberMeCheckbox.checked = false;
+                                forgotPass.style.display='none';
                                 SignInOrUpButton.appendChild(arrow);
                             }
                         }, (1 - i) * 100);
