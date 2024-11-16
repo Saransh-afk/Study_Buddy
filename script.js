@@ -30,6 +30,26 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    // Apply smooth scrolling to anchor links with the class 'nav-item'
+    document.querySelectorAll('a.nav-item[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            const targetId = this.getAttribute('href').substring(1); // Get target ID
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start' // Scroll to the start of the section
+                });
+            }
+        });
+    });
+});
+
+
+
 
 
 function menuAnimation() {
