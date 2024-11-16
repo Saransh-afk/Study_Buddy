@@ -4,23 +4,23 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    overflow-x: hidden; 
+    scroll-behavior: smooth;    
 }
 
 body {
-    height: 100vh; /* Set height to full viewport height */
+    height: 100vh; 
     width: 100vw;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 0;
     font-style: normal;
     background: #0b042500;
     background-image: url(landing_images/lopo.jpg);
-    color: #f3f4f6; /* Tailwind's gray-100 for text */
-    
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: center; /* Centers the image */
-    background-attachment: fixed; /* Fixes the background image */
+    color: #f3f4f6; 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-attachment: fixed; 
     transition: background-color 0.3s ease;
 }
 
@@ -34,14 +34,15 @@ body {
   
 }
 .brand img {
-    margin-left: 1.5vw;
-    margin-top: 1.5vh;
-    width: 230px; /* Adjust as needed */
-    height: 120px;
+    
+    width: 190px; 
+    height: 100px;
+    margin-top: 1vh;
+    margin-bottom: 8vh;
+    margin-left: 2.2vh;
     
 }
 
-/* Navbar Styles */
 .navbar {
     background: #0b042500;
     color: #f3f4f6;   
@@ -95,7 +96,7 @@ body {
     height: 3px; /* Thickness of the underline */
     left: 0;
     bottom: 0;
-    background: linear-gradient(to right,rgba(255, 252, 252, 0.603),#099ce0); /* Color of the underline */
+    background: linear-gradient(to right,rgba(255, 252, 252, 0.925),#099ce0); /* Color of the underline */
     transition: width 0.5s ease-out;
 }
 
@@ -120,7 +121,7 @@ body {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     font-size: 50px;
-    margin-bottom: 10vh;
+    margin-bottom: 12vh;
 }
 
 .navbar .brand {
@@ -738,7 +739,6 @@ swiper-slide {
 /* Ensure the footer container has relative positioning */
 #footer {
     position: relative;
-   
     color: #ffffff;
     padding: 3vw;
     font-family: 'Arial', sans-serif;
@@ -747,15 +747,19 @@ swiper-slide {
 }
 
 #footVideo {
-    
-    margin-top: 43vh;
+    margin-top: 20vh;
     width: 100%;
     height: auto;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1; /* Send the video to the background */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1) 50%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1) 50%);
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
 }
+
 
 .footer-links {
     width: 50%;
@@ -786,7 +790,7 @@ swiper-slide {
 
 .text-overlay {
 
-    margin-top: 60vh;
+    margin-top: 35vh;
     position: absolute;
     /* Adjust as needed to position correctly */
     left: 0;
@@ -1142,8 +1146,8 @@ swiper-slide {
     }
 
     .nav-links {
-        margin-top: 3vw;
-        font-size: 2px;
+        margin-top: -9vw;
+        font-size: 1px;
         margin-bottom: -2px;
     }
 
@@ -1325,6 +1329,8 @@ swiper-slide {
     }
     .nav-links{
         margin-bottom: 0vw;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
 
@@ -1342,6 +1348,9 @@ swiper-slide {
         font-size: 4vw;
         margin-bottom: 0.5vw;
       }
+      .rightSam{
+        display: none;
+      }
 
     .carousel-slide li {
         height: 8.9vh;
@@ -1353,8 +1362,10 @@ swiper-slide {
     }
 
     .nav-item {
+        padding-left: 2px;
+        margin-left: 2px;
         justify-content: first baseline;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
     .footer-links {
         width: 50%;
