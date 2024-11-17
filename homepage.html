@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        body {
+            padding: 30px;
+            background: linear-gradient(to right, #07001f, #0a0b14);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #ffffff;
+        }
+        div {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #d1d1d1;
+            margin: 10px 0;
+        }
+        span {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #ffffff;
+        }
+        button {
+            color: #ffffff;
+            background-color: #006eff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0052cc;
+        }
+    </style>
+    <script type="module" src="./homepage.js"></script>
+</head>
+<body>
+    <h1>Welcome to Your Profile</h1>
+    <div>First Name: <span id="loggedUserFName">John</span></div>
+    <div>Last Name: <span id="loggedUserLName">Doe</span></div>
+    <div>Email: <span id="loggedUserEmail">johndoe@example.com</span></div>
+    <button id="logout">Logout</button>
+</body>
+</html>
