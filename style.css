@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #07001f, #07001f);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #0a0b14;
+    width: 400px;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.9);
+    color: white;
+}
+
+form {
+    margin: 0;
+}
+
+.form-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-group input {
+    width: 100%;
+    background-color: #0a0b14;
+    border: 2px solid #1e1f2b;
+    border-radius: 5px;
+    padding: 10px 12px 10px 40px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #006eff;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #006eff;
+    font-size: 1.2rem;
+}
+
+.input-group label {
+    position: absolute;
+    top: -20px;
+    left: 12px;
+    font-size: 0.9rem;
+    color: white;
+}
+
+button {
+    width: 100%;
+    background: #006eff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0052cc;
+}
+
+.recover {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.recover a {
+    color: #006eff;
+    text-decoration: none;
+}
+
+.recover a:hover {
+    text-decoration: underline;
+}
+
+.or {
+    text-align: center;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+    color: white;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.icons i {
+    font-size: 1.5rem;
+    color: #006eff;
+    padding: 10px;
+    border: 2px solid #006eff;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.icons i:hover {
+    background: #006eff;
+    color: white;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+#signInButton,
+#signUpButton {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #006eff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#signInButton:hover,
+#signUpButton:hover {
+    text-decoration: underline;
+    color: white;
+}
